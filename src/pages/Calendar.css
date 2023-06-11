@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  html {
+    font-size: 90%;
+  }
+
+  button {
+    position: relative;
+    background-color: #e0f0e1; 
+    border: none;
+    color: rgb(238, 162, 162);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+  }
+
+  
+
+  .container {
+    
+    width: 100%;
+    height: 100vh;
+    background: url("2641047.webp");
+    color: rgb(250, 235, 235);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .calendar {
+    position: fixed; right: 50%;
+    width: 45rem;
+    height: 52rem;
+    background-color: #8181f1;
+    box-shadow: 0 0.5rem 5rem rgba(0, 0, 0, 0.4);
+  }
+  
+  .event {
+    position: relative; left: 25%; top: -30%; 
+    width: 40rem;
+    height: 20rem;
+    margin: 20px;
+    padding: 20px;
+  
+    background-color: #fa9fd4;
+  }
+  .showEvent{
+    position: relative; right:5%; top: 20%;
+    width: 40rem;
+    height: 40rem;
+    
+  
+    background-color: #e9dae3;
+  }
+  
+
+  input[type=text] {
+    position: relative;
+    left: 50;
+    width: 50%;
+    padding: 20px;
+    border: 5px solid rgb(243, 218, 218);
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  input[type=submit] {
+    background-color: #977cd4;
+    color: white;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right 50%;
+    
+  }
+
+  input[type=submit]:hover {
+    background-color: hsl(273, 49%, 72%);
+  }
+
+  .col-20 {
+    float: left;
+    width: 20%;
+    margin-top: 6px;
+  }
+  
+  .col-80 {
+    float: left;
+    width: 80%;
+    margin-top: 6px;
+  }
+
+  .month {
+    width: 100%;
+    height: 12rem;
+    background-color: #e7b1be;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    text-align: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+  }
+  
+  .month i {
+    font-size: 5rem;
+    cursor: pointer;
+  }
+  
+  .month h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .month p {
+    font-size: 1.6rem;
+  }
+  
+  .weekdays {
+    width: 100%;
+    height: 5rem;
+    padding: 0 0.4rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .weekdays div {
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+    width: calc(44.2rem / 7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(236, 188, 238, 0.918);
+  }
+  
+  .days {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.2rem;
+  }
+  
+  .days div {
+    font-size: 1.2rem;
+    margin: 0.3rem;
+    width: calc(40.2rem / 7);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+  }
+  
+  .days div:hover:not(.today) {
+    background-color: #262626;
+    border: 0.2rem solid #777;
+    cursor: pointer;
+  }
+  
+  .prev-date,
+  .next-date {
+    opacity: 0.5;
+  }
+  
+  .today {
+    background-color: #e97f8d;
+  }
